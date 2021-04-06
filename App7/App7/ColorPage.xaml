@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App7.ColorPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ListView x:Key="AllColors" />
+            <Color x:Key="ChoosenColor"/>
+            <Color x:Key="OpositeColor"/>
+            <x:Int32 x:Key="ColorA">#004D40</x:Int32>
+            <x:Int32 x:Key="ColorR">#004D40</x:Int32>
+            <x:Int32 x:Key="ColorG">#004D40</x:Int32>
+            <x:Int32 x:Key="ColorB">#004D40</x:Int32>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="A"/>
+            <Slider x:Name="ColorA"
+                    Minimum="0" 
+                    Maximum="256"
+                    ValueChanged="Slider_ValueChanged"/>
+            <Label Text="R"/>
+            <Slider x:Name="ColorR"
+                    Minimum="0" 
+                    Maximum="256"
+                    ValueChanged="Slider_ValueChanged"/>
+            <Label Text="G"/>
+            <Slider x:Name="ColorG"
+                    Minimum="0" 
+                    Maximum="256"
+                    ValueChanged="Slider_ValueChanged"/>
+            <Label Text="B"/>
+            <Slider x:Name="ColorB"
+                    Minimum="0" 
+                    Maximum="256"
+                    ValueChanged="Slider_ValueChanged"/>
+            <Picker x:Name="ColorPicker" ItemsSource="{DynamicResource AllColors}"></Picker>
+            <Button Text="Show all"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="StartAndExpand"
+                WidthRequest="200" 
+                CornerRadius="30"
+                HeightRequest="60"
+                Margin="20" 
+                Clicked="Button_ShowAll_Clicked"/>
+            <Button Text="Сol1"
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="{DynamicResource ChoosenColor}"
+                    TextColor="{DynamicResource OpositeColor}"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150" 
+                CornerRadius="20"
+                HeightRequest="120"
+                Margin="20" 
+                Clicked="Button_Accept_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

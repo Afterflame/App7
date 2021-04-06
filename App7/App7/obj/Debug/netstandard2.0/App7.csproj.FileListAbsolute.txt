@@ -1,0 +1,17 @@
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\bin\Debug\netstandard2.0\App7.deps.json
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\bin\Debug\netstandard2.0\App7.dll
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\bin\Debug\netstandard2.0\ref\App7.dll
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\bin\Debug\netstandard2.0\App7.pdb
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App7.csprojAssemblyReference.cache
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\AllColorsPage.xaml.g.cs
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\ColorPage.xaml.g.cs
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\Page1.xaml.g.cs
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App7.AssemblyInfoInputs.cache
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App7.AssemblyInfo.cs
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App7.csproj.CoreCompileInputs.cache
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\XamlC.stamp
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App7.dll
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\ref\App7.dll
+E:\OSoft\AndSDKProj\Subsub\App7\App7\App7\obj\Debug\netstandard2.0\App7.pdb
