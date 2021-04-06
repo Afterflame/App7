@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:App7"
+             x:Class="App7.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="GradientColor1">White</Color>
+            <Color x:Key="GradientColor2">White</Color>
+            <x:Array x:Key="kkk1"
+                     Type="{x:Type local:Notes}">
+                <local:Notes Text="123" ></local:Notes>
+            </x:Array>
+            <x:Array x:Key="kkk2"
+                     Type="{x:Type local:Notes}">
+                <local:Notes Text="321" ></local:Notes>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical">
+        <ScrollView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="Col1"
+                  Grid.Column="0"
+                  BindableLayout.ItemsSource="{DynamicResource Key=kkk1}" 
+                  BackgroundColor="Red"
+                  VerticalOptions="Start"
+                  SizeChanged="Col1_SizeChanged">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="7">
+                                <Frame Padding="7">
+                                    <Frame.GestureRecognizers>
+                                        <SwipeGestureRecognizer
+                                        Direction="Left"
+                                        CommandParameter="{Binding Id}"
+                                        Command="{Binding TapCommand}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Editor Text="{Binding Text}" IsReadOnly="True"/>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+                <StackLayout x:Name="Col2"
+                     Grid.Column="1"
+                     BindableLayout.ItemsSource="{StaticResource Key=kkk2}" 
+                     BackgroundColor="Aqua"
+                     VerticalOptions="Start"
+                     SizeChanged="Col2_SizeChanged">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="7">
+                                <Frame Padding="7">
+                                    <Editor Text="{Binding Text}" IsReadOnly="True"/>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+        <Grid VerticalOptions="EndAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                Text="Сol1"
+                    BackgroundColor="{DynamicResource Key=GradientColor1}"
+                HorizontalOptions="StartAndExpand" 
+                VerticalOptions="EndAndExpand"
+                WidthRequest="50" 
+                CornerRadius="75"
+                HeightRequest="50"
+                Margin="10" 
+                Clicked="Button_Col1_Clicked"/>
+            <Button Grid.Column="1"
+                Text="Add"
+                HorizontalOptions="EndAndExpand" 
+                VerticalOptions="EndAndExpand"
+                WidthRequest="140" 
+                CornerRadius="100"
+                HeightRequest="75"
+                Margin="20" 
+                Clicked="Button_Clicked"/>
+            <Button Grid.Column="2"
+                Text="Сol2"
+                    BackgroundColor="{DynamicResource Key=GradientColor2}"
+                HorizontalOptions="EndAndExpand" 
+                VerticalOptions="EndAndExpand"
+                WidthRequest="50" 
+                CornerRadius="75"
+                HeightRequest="50"
+                Margin="10" 
+                Clicked="Button_Col2_Clicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
